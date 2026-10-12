@@ -1,0 +1,39 @@
+{
+  "categories": {
+    "asOf": "2026-08-31",
+    "source": "AMFI SIF monthly report, August 2026",
+    "aumCr": {
+      "Hybrid Long-Short": 19670,
+      "Equity Ex-Top 100 Long-Short": 6289,
+      "Equity Long-Short": 3450,
+      "Active Asset Allocator Long-Short": 1721,
+      "Sector Rotation Long-Short": 46
+    }
+  },
+  "schemes": [
+    { "match": "Altiva Hybrid Long-Short", "aumCr": 7186, "asOf": "2026-07-31" },
+    { "match": "Altiva Equity Ex-Top 100 Long-Short", "aumCr": 452, "asOf": "2026-06-30" },
+    { "match": "Apex Hybrid Long-Short", "aumCr": 80.52, "asOf": "2026-06-30" },
+    { "match": "Arthaya Equity Long-Short", "aumCr": 117, "asOf": "2026-06-30" },
+    { "match": "Arudha Hybrid Long-Short", "aumCr": 116.76, "asOf": "2026-07-31" },
+    { "match": "Arudha Equity Long-Short", "aumCr": 110.81, "asOf": "2026-07-31" },
+    { "match": "Diviniti Equity Long-Short", "aumCr": 333.31, "asOf": "2026-06-30" },
+    { "match": "DynaSIF Equity Long-Short", "aumCr": 318.55, "asOf": "2026-06-30" },
+    { "match": "DynaSIF Active Asset Allocator Long-Short", "aumCr": 207.13, "asOf": "2026-06-30" },
+    { "match": "DynaSIF Equity Ex-Top 100 Long-Short", "aumCr": 89.35, "asOf": "2026-06-30" },
+    { "match": "iSIF Hybrid Long-Short", "aumCr": 927, "asOf": "2026-06-30" },
+    { "match": "iSIF Equity Ex-Top 100 Long-Short", "aumCr": 1224.44, "asOf": "2026-03-31" },
+    { "match": "Magnum Hybrid Long-Short", "aumCr": 3647, "asOf": "2026-06-30" },
+    { "match": "qsif Equity Long-Short", "aumCr": 625, "asOf": "2026-07-31" },
+    { "match": "qsif Hybrid Long-Short", "aumCr": 170, "asOf": "2026-07-31" },
+    { "match": "qsif Equity Ex-Top 100 Long-Short", "aumCr": 274, "asOf": "2026-07-31" },
+    { "match": "qsif Active Asset Allocator Long-Short", "aumCr": 92, "asOf": "2026-07-31" },
+    { "match": "qsif Sector Rotation Long-Short", "aumCr": 45, "asOf": "2026-07-31" },
+    { "match": "RedHex Hybrid Long-Short", "aumCr": 581, "asOf": "2026-06-30" },
+    { "match": "Sapphire Equity Long-Short", "aumCr": 999, "asOf": "2026-06-30" },
+    { "match": "Titanium Hybrid Long-Short", "aumCr": 549, "asOf": "2026-06-30" },
+    { "match": "Titanium Equity Long-Short", "aumCr": 208, "asOf": "2026-06-30" },
+    { "match": "WSIF Equity Long-Short", "aumCr": 21.7, "asOf": "2026-06-30" },
+    { "match": "WSIF Equity Ex-Top 100 Long-Short", "aumCr": 23.64, "asOf": "2026-06-30" }
+  ]
+}

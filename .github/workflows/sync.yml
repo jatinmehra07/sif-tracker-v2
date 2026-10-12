@@ -1,0 +1,17 @@
+name: Sync SIF NAVs
+
+on:
+  schedule:
+    - cron: '*/20 15-18 * * 1-5'   # evening, about 8:30 PM to midnight IST, Mon to Fri
+    - cron: '*/20 3-4 * * 2-6'     # morning, about 8:30 to 10:30 AM IST, Tue to Sat (late funds)
+  workflow_dispatch: {}            # lets you run it by hand from the Actions tab
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call the sync endpoint
+        run: |
+          curl --fail --silent --show-error --retry 2 --max-time 60 \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "${{ secrets.SITE_URL }}/api/sync"
