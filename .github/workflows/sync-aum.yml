@@ -1,0 +1,16 @@
+name: Sync SIF AUM
+
+on:
+  schedule:
+    - cron: '30 4 * * *'     # every day, about 10:00 AM IST
+  workflow_dispatch: {}      # lets you run it by hand from the Actions tab
+
+jobs:
+  sync-aum:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call the AUM sync endpoint
+        run: |
+          curl --fail --silent --show-error --retry 2 --max-time 60 \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "${{ secrets.SITE_URL }}/api/sync-aum"

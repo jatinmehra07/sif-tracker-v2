@@ -36,9 +36,7 @@ export default async function Home() {
       </main>
 
       <footer className="mx-auto max-w-7xl px-6 pb-10 text-xs text-slate-500">
-        Source: AMFI. NAVs are published on market days; weekends and holidays show the previous day. Scheme AUM is a
-        monthly figure and may be older than the NAV. Past performance does not guarantee future returns. This is not
-        investment advice.
+        Source: AMFI. NAVs are published on market days; weekends and holidays show the previous day.AUM figures come from AMFI's Average AUM data and fund-house factsheets; each figure shows the period it covers and may be older than the NAV.
       </footer>
     </div>
   );
