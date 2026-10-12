@@ -2,6 +2,14 @@
 
 import { useState } from 'react';
 import { navFmt, niceDate, crore, monthYear, avatarColor, initials } from '@/lib/format';
+function AumLine({ label, item }) {
+  if (!item) return null;
+  return (
+    <p>
+      {label} <b className="text-slate-700">{crore(item.aumCr)}</b> · {item.period || monthYear(item.asOf)}
+    </p>
+  );
+}
 
 export default function FundCard({ family, onOpen }) {
   const [index, setIndex] = useState(0);
@@ -13,6 +21,8 @@ export default function FundCard({ family, onOpen }) {
 
   const variant = family.variants[Math.min(index, family.variants.length - 1)];
   const fund = variant.fund;
+  // "2026-07-31" -> "Jul 2026"
+
 
   return (
     <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
@@ -81,14 +91,11 @@ export default function FundCard({ family, onOpen }) {
               </p>
             )}
 
-            {fund.categoryAum?.aumCr && (
-              <p className="flex justify-between border-t border-slate-200/60 pt-1 text-[11px] text-slate-500">
-                <span className="truncate pr-2">Total {variant.category}:</span>
-                <span className="shrink-0 font-medium text-slate-700">
-                  {crore(fund.categoryAum.aumCr)}
-                </span>
-              </p>
-            )}
+           <div className="mt-3 space-y-1 text-xs text-slate-500">
+  <AumLine label="Scheme avg AUM" item={fund.aum.scheme} />
+  <AumLine label="Fund house avg AUM" item={fund.aum.house} />
+  <AumLine label="Category avg AUM" item={fund.aum.category} />
+</div>
           </div>
         </div>
       </div>
